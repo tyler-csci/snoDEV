@@ -200,7 +200,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header bg-gradient-primary-to-secondary p-4">
-                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Send feedback</h5>
+                        <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">Send us a message!</h5>
                         <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body border-0 p-4">
@@ -212,24 +212,26 @@
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
                         <form name="contact" method="POST" data-netlify="true">
-                            <p>
-                              <label>Your Name: <input type="text" name="name" /></label>   
-                            </p>
-                            <p>
-                              <label>Your Email: <input type="email" name="email" /></label>
-                            </p>
-                            <p>
-                              <label>Your Role: <select name="role[]" multiple>
-                                <option value="leader">Leader</option>
-                                <option value="follower">Follower</option>
-                              </select></label>
-                            </p>
-                            <p>
-                              <label>Message: <textarea name="message"></textarea></label>
-                            </p>
-                            <p>
-                              <button type="submit">Send</button>
-                            </p>
+                            <div class="form-floating mb-3">
+                                <input type="text" name="name" class="form-control" id="floating-name" placeholder="name" required>
+                                <label for="floating-email">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" name="email" class="form-control" id="floating-email" placeholder="name@example.com" required>
+                                <label for="floating-email">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" name="phone" class="form-control" id="phone" placeholder="(000) 000-0000">
+                                <label for="phone">Phone Number (optional)</label>
+                            </div>
+                            <div class="form-floating">
+                                <textarea class="form-control" name="message" placeholder="Please leave a message" id="floating=message" style="height: 100px"></textarea>
+                                <label for="floating-message">Message</label>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary my-3 w-100">Send</button>
+                            </div>
+                            
                           </form>
                     </div>
                 </div>
